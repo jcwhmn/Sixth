@@ -1,0 +1,3 @@
+org.springframework.test.context.ContextCustomizerFactory=\
+com.jcwhmn.config.RedisTestContainersSpringContextCustomizerFactory,\
+com.jcwhmn.config.SqlTestContainersSpringContextCustomizerFactory
