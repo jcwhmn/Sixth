@@ -1,5 +1,5 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
-name: sixth
+version: '2'
 services:
   mysql:
     image: mysql:8.0.33
@@ -7,8 +7,10 @@ services:
       - ./config/mysql:/etc/mysql/conf.d
     #   - ~/volumes/jhipster/Sixth/mysql/:/var/lib/mysql/
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=sixth
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_INITDB_SKIP_TZINFO=true
+
     # If you want to expose these ports outside your dev PC,
     # remove the "127.0.0.1:" prefix
     ports:
